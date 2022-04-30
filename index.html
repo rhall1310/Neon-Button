@@ -19,9 +19,18 @@
 
   <script>
     var r = document.querySelector(":root");
+    var x = true;
 
     function myFunction_set() {
-      r.style.setProperty("--clr-neon", "lightblue");
+      if (x == true) {
+        r.style.setProperty("--clr-neon", "lightblue");
+        x = false;
+        console.log(x);
+      } else {
+        r.style.setProperty("--clr-neon", "hsl(317 100% 54%)");
+        x = true;
+        console.log(x);
+      }
     }
   </script>
 
